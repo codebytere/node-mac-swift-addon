@@ -1,0 +1,33 @@
+{
+  "name": "node-mac-swift-addon",
+  "version": "1.0.0",
+  "description": "A native Node.js module that demonstrates basic Swift interop",
+  "main": "index.js",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "nan": "^2.14.1"
+  },
+  "devDependencies": {
+    "clang-format": "^1.4.0",
+    "prettier": "^2.0.5",
+    "node-gyp": "^7.0.0"
+  },
+  "scripts": {
+    "build": "node-gyp build",
+    "configure": "node-gyp configure",
+    "build:dev": "node-gyp build --debug",
+    "clean": "node-gyp clean",
+    "lint": "prettier --check '**/*.js'",
+    "format": "clang-format -i logging.mm && prettier --write '**/*.js'",
+    "rebuild": "~/Developer/node-gyp/bin/node-gyp.js rebuild --ninja-path=/Users/codebytere/Developer/depot_tools/",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "keywords": [
+    "nodejs",
+    "native-node-addon",
+    "addon",
+    "macos"
+  ],
+  "author": "Shelley Vohr <shelley.vohr@gmail.com>",
+  "license": "MIT"
+}
