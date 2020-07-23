@@ -4,7 +4,7 @@ $ git clone https://github.com/codebytere/node-mac-swift-addon
 $ cd node-mac-swift-addon
 $ npm install  --ignore-scripts
 $ ./node_modules/.bin/node-gyp rebuild --ninja
-$ mv build/Release/InteropFramework.framework/Versions/A/InteropFramework build/Release/InteropFramework.framework/Versions/A/InteropFramework.node
+$ npm run move-target
 $ node index.js
 ```
 

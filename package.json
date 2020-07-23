@@ -18,8 +18,9 @@
     "build:dev": "node-gyp build --debug",
     "clean": "node-gyp clean",
     "lint": "prettier --check '**/*.js'",
+    "move-target": "mv build/Release/InteropFramework.framework/Versions/A/InteropFramework build/Release/InteropFramework.framework/Versions/A/InteropFramework.node",
     "format": "clang-format -i logging.mm && prettier --write '**/*.js'",
-    "rebuild": "./node_modules/.bin/node-gyp rebuild --ninja --verbose",
+    "rebuild": "./node_modules/.bin/node-gyp rebuild --ninja --verbose && npm run move-target",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "keywords": [
