@@ -5,12 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "bindings": "^1.5.0",
-    "nan": "^2.14.1"
+    "nan": "^2.14.1",
+    "node-gyp": "https://github.com/codebytere/node-gyp/archive/v999.tar.gz"
   },
   "devDependencies": {
     "clang-format": "^1.4.0",
-    "prettier": "^2.0.5",
-    "node-gyp": "^7.0.0"
+    "prettier": "^2.0.5"
   },
   "scripts": {
     "build": "node-gyp build",
@@ -19,7 +19,7 @@
     "clean": "node-gyp clean",
     "lint": "prettier --check '**/*.js'",
     "format": "clang-format -i logging.mm && prettier --write '**/*.js'",
-    "rebuild": "~/Developer/node-gyp/bin/node-gyp.js rebuild --ninja-path=/Users/codebytere/Developer/depot_tools/",
+    "rebuild": "./node_modules/.bin/node-gyp rebuild --ninja --verbose",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "keywords": [
