@@ -20,6 +20,7 @@
       ],
       'xcode_settings': {
         'DEFINES_MODULE': 'YES',
+        'MACOSX_DEPLOYMENT_TARGET': '10.15',
         'SWIFT_OBJC_BRIDGING_HEADER': 'InteropFramework-Bridging-Header.h',
         'GCC_OPTIMIZATION_LEVEL': '0',
         'CLANG_ENABLE_MODULES': 'YES',
@@ -27,7 +28,6 @@
         'CLANG_MODULE_CACHE_PATH': '<(PRODUCT_DIR)/ModuleCache',
         'SWIFT_OPTIMIZATION_LEVEL': '-Onone',
         'LD_RUNPATH_SEARCH_PATHS': [
-          '@executable_path/Frameworks',
           '@loader_path/Frameworks'
         ],
       },

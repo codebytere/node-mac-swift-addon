@@ -1,4 +1,7 @@
-const p = './build/Release/InteropFramework.framework/Versions/A/InteropFramework.node'
-const logger = require(p)
+const addon = require('./build/Release/InteropFramework.framework/Versions/A/InteropFramework.node')
 
-logger.sayHello()
+// Print 'hello' to console.
+addon.sayHello()
+
+const result = addon.add(1, 2)
+console.log(result) // 3
