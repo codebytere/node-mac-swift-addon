@@ -25,11 +25,20 @@ NAN_METHOD(Add) {
   info.GetReturnValue().Set(result);
 }
 
+NAN_METHOD(RunKeyCheck) {
+  SwiftClass *swiftClass = [[SwiftClass alloc] init];
+  bool result = [swiftClass runKeyCheck];
+
+  info.GetReturnValue().Set(result);
+}
+
 NAN_MODULE_INIT(InitAll) {
   Set(target, New<String>("sayHello").ToLocalChecked(),
     GetFunction(New<FunctionTemplate>(SayHello)).ToLocalChecked());
   Set(target, New<String>("add").ToLocalChecked(),
     GetFunction(New<FunctionTemplate>(Add)).ToLocalChecked());
+  Set(target, New<String>("runKeyCheck").ToLocalChecked(),
+    GetFunction(New<FunctionTemplate>(RunKeyCheck)).ToLocalChecked());
 }
 
 NODE_MODULE(InteropFramework, InitAll)
