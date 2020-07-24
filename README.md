@@ -28,9 +28,9 @@ $ node index.js
 
 ## Why? How? 
 
-This is possible as a result of patches to `node-gyp` I added in [this commit](https://github.com/codebytere/node-gyp/commit/aaf533f733cba374303e28fe152a6ef56c987b1d).
+This is possible as a result of patches to `node-gyp` I added in [this commit](https://github.com/codebytere/node-gyp/commit/e55dc9ba27f9b52f3062a08f2b83e3aa353de2b8).
 
-`node-gyp` is a cross-platform command-line tool written in Node.js for compiling native addon modules for Node.js, which is extended to support the development of Node.js native addons. Out of the gate, it's capable of handling C, C++, and Objective-C++ amongst others, although those three are what you'd typically use to create a native Node.js addon with [Nan](https://github.com/nodejs/nan) or [node-addon-api](https://github.com/nodejs/node-addon-api).
+`node-gyp` is a cross-platform command-line tool for compiling native addon modules for Node.js. Out of the gate, it's capable of handling C, C++, and Objective-C++ amongst others, although those three are what you'd typically use to create a native Node.js addon with [Nan](https://github.com/nodejs/nan) or [node-addon-api](https://github.com/nodejs/node-addon-api).
 
 After Apple announced Big Sur at the 2020 edition of WWDC, I poked around at some of the upcoming APIs that would be made available to developers, and discovered to my chagrin that they would only be made available as Swift APIs, and not have dual Objective-C and Swift support as most Apple APIs for macOS do.
 

@@ -12,7 +12,7 @@
     "configure": "./node_modules/.bin/node-gyp configure",
     "clean": "./node_modules/.bin/node-gyp clean",
     "move-target": "mv build/Release/InteropFramework.framework/Versions/A/InteropFramework build/Release/InteropFramework.framework/Versions/A/InteropFramework.node",
-    "rebuild": "./node_modules/.bin/node-gyp rebuild --ninja --verbose && npm run move-target"
+    "rebuild": "./node_modules/.bin/node-gyp rebuild --ninja && npm run move-target"
   },
   "keywords": [
     "nodejs",
